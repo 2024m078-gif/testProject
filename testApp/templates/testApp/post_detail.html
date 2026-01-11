@@ -1,0 +1,15 @@
+
+
+{% block content %}
+<h1>投稿詳細</h1>
+
+<p><strong>{{ post.author.username if post.author else "匿名" }}</strong></p>
+<p>{{ post.content }}</p>
+<p>価格: {{ post.price }} 円</p>
+<p>カテゴリー: {{ post.category.name }}</p>
+<p><small>{{ post.created_at }}</small></p>
+
+<hr>
+
+{% if user.is_authenticated and post.author == user %}
+    <a hre

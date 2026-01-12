@@ -137,4 +137,4 @@ INTERNAL_IPS = [
 "127.0.0.1",
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://testproject-fqmt.onrender.com"]

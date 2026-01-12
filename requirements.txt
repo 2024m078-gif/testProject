@@ -1,4 +1,6 @@
-Django @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_29ihdoji5n/croot/django_1745263594055/work
-django-cors-headers==4.9.0
-django-debug-toolbar==6.1.0
-djangorestframework @ file:///home/conda/feedstock_root/build_artifacts/djangorestframework_1754514405054/work
+Django
+waitress
+python-dotenv
+djangorestframework
+django-cors-headers
+whitenoise

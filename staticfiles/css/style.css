@@ -1,0 +1,30 @@
+/* 全体の設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* 1枚目の画像にあるオレンジのライン */
+.orange-line {
+    height: 8px;
+    background-color: #ff8c00;
+    width: 100%;
+}
+
+/* 黒いナビゲーションバー */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{% if form.instance.pk %}投稿の編集{% else %}新しい投稿{% endif %}</h1>
+
+    <form method="POST" style="margin-top: 20px;">
+        {% csrf_token %}
+        <div style="margin-bottom: 20px;">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" style="background-color: #333; color: white; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer;">保存する</button>
+        <a href="{% url 'timeline' %}" style="margin-left: 15px; color: #666; text-decoration: none;">戻る</a>
+    </form>
+{% endblock %}

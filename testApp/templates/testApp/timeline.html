@@ -1,34 +1,19 @@
-
+{% extends "base.html" %}
 
 {% block content %}
-<h1>タイムライン</h1>
-
-{% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}">新規投稿</a>
-    <!-- 安全なログアウト（POSTフォーム） -->
-    <form method="post" action="{% url 'logout' %}" style="display:inline;">
-        {% csrf_token %}
-        <button type="submit">ログアウト</button>
-    </form>
-{% else %}
-    <a href="{% url 'login' %}">ログイン</a>
-{% endif %}
-
-<hr>
-
-{% for post in posts %}
-    <div>
-        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.name }}</a></h2>
-        <p>{{ post.content|truncatewords:20 }}</p>
-        <p>投稿者：{{ post.author.username }}</p>
-
-        {% if user.is_authenticated and user == post.author %}
-            <a href="{% url 'post_edit' post.pk %}">編集</a>
-            <a href="{% url 'post_delete' post.pk %}">削除</a>
-        {% endif %}
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1>タイムライン</h1>
+        <a href="{% url 'post_new' %}" style="background-color: #ff8c00; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">新規投稿</a>
     </div>
-{% empty %}
-    <p>投稿はまだありません。</p>
-{% endfor %}
 
+    {% for post in posts %}
+        <div style="border-bottom: 1px solid #eee; padding: 15px 0;">
+            <p style="font-size: 1.1rem; margin: 0;">{{ post.content }}</p>
+            <small style="color: #666;">投稿者: {{ post.author }} | {{ post.created_at|date:"Y/m/d H:i" }}</small>
+            <br>
+            <a href="{% url 'post_detail' post.pk %}" style="font-size: 0.8rem; color: #007bff; text-decoration: none;">詳細を見る</a>
+        </div>
+    {% empty %}
+        <p>投稿がありません。</p>
+    {% endfor %}
 {% endblock %}

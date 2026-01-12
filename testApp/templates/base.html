@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>応用プログラミング</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div style="height: 8px; background-color: #ff8c00; width: 100%;"></div>
+
+    <nav style="background-color: #333; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <a href="{% url 'timeline' %}" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem;">実践プログラミング</a>
+        <div style="font-size: 0.9rem;">
+            {% if user.is_authenticated %}
+                <span>こんにちは、{{ user.username }}さん</span>
+                <a href="{% url 'logout' %}" style="color: #ccc; margin-left: 15px; text-decoration: none;">ログアウト</a>
+            {% else %}
+                <a href="{% url 'login' %}" style="color: white; text-decoration: none;">ログイン</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div style="max-width: 900px; margin: 30px auto; padding: 20px; background: white; min-height: 80vh;">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

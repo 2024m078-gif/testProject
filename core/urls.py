@@ -34,10 +34,3 @@ urlpatterns = [
     path("api/posts/",PostListAPIView.as_view()),
     path('api/weather/', views.weather, name='weather'),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-
-    urlpatterns += [
-        path('__debug__/', include(debug_toolbar.urls)),
-    ]

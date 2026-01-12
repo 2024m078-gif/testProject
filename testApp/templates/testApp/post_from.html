@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="post-form">
+    <h1>新しい投稿</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save-btn">保存</button>
+    </form>
+
+    <hr>
+    <a href="{% url 'timeline' %}" class="back-link">← タイムラインに戻る</a>
+</div>
+
+<style>
+    /* このページ専用のちょっとした装飾 */
+    .post-form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .save-btn {
+        background-color: #ff8c00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .back-link {
+        color: #666;
+        text-decoration: none;
+    }
+</style>
+{% endblock %}

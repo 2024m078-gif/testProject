@@ -87,7 +87,7 @@ ca-certificates=2025.12.2=hca03da5_0
 cachetools=5.5.1=py313hca03da5_0
 cctools=949.0.1=hc179dcd_25
 cctools_osx-arm64=949.0.1=h332cad3_25
-certifi=2025.11.12=py313hca03da5_0
+certifi=2026.01.04=py313hca03da5_0
 cffi=1.17.1=py313h3eb5a62_1
 chardet=4.0.0=py313hca03da5_1003
 charset-normalizer=3.3.2=pyhd3eb1b0_0
@@ -131,6 +131,7 @@ dill=0.3.8=py313hca03da5_0
 distributed=2025.2.0=py313hca03da5_0
 distro=1.9.0=py313hca03da5_0
 django=5.2.6=pypi_0
+django-cors-headers=4.9.0=pypi_0
 django-debug-toolbar=6.1.0=pypi_0
 djangorestframework=3.16.1=pyhd8ed1ab_0
 dmglib=0.9.5=py313h2d4777b_1
@@ -518,6 +519,7 @@ unixodbc=2.3.11=h1a28f6b_0
 urllib3=2.3.0=py313hca03da5_0
 utf8proc=2.6.1=h80987f9_1
 w3lib=2.1.2=py313hca03da5_0
+waitress=3.0.2=py313hca03da5_0
 watchdog=4.0.2=py313h80987f9_0
 wcwidth=0.2.5=pyhd3eb1b0_0
 webencodings=0.5.1=py313hca03da5_2

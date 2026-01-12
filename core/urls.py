@@ -21,7 +21,6 @@ from django.contrib import admin
 from django.urls import path,include
 from testApp.views import PostListView, PostDetailView, PostDeleteView,PostListAPIView
 from testApp import views
-import debug_toolbar  
 from django.conf import settings #
 
 urlpatterns = [
